@@ -24,11 +24,49 @@
     width: 195px;
     height: 50px;
     border-radius: 10px;
-    border: 1px solid #E2E7E9;
+    border: 1px solid #e2e7e9;
     margin-top: 10px;
   }
-  .categories-button:focus{
-      background: #044dc3;
-      color: white;
+  .categories-button:focus {
+    background: #044dc3;
+    color: white;
+  }
+}
+.all-product-list {
+  display: flex;
+  width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  .card {
+    width: 272px;
+    height: 410px;
+    padding: 15px;
+    border: 1px solid #e2e7e9;
+    border-radius: 10px;
+    margin: 15px;
+    .product-photo {
+      width: 242px;
+      height: 244px;
+      border-radius: 10px;
+    }
+    .product-title {
+      width: 207px;
+      height: 36px;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .product-shipping {
+      color: #51b549;
+      font-weight: 600;
+      font-size: 15px;
+      margin: 0;
+    }
+    .product-price {
+      font-weight: bold;
+      color: black;
+      margin-bottom: 3px;
+    }
   }
 }
