@@ -1,0 +1,152 @@
+* {
+  outline: none;
+  font-family: "Source Sans Pro", sans-serif;
+}
+/* Navbar */
+.navbar-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .navbar-basket-mobile {
+    display: none;
+  }
+  .navbar-filter {
+    width: 872px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 105px;
+    border-radius: 28px;
+    background-color: #f7f7f7;
+    border: 2px solid #edf1f2;
+    .search-icon {
+      margin-left: 20px;
+      margin-right: 5px;
+      width: 18px;
+      height: 20px;
+    }
+    .search-input {
+      width: 872px;
+      height: 50px;
+      background-color: #f7f7f7;
+      border: 0;
+    }
+    .search-button {
+      width: 66px;
+      height: 40px;
+      background: #51b549 0% 0% no-repeat padding-box;
+      margin-right: 5px;
+      border: 2px solid #edf1f2;
+      border-radius: 28px;
+      color: white;
+    }
+  }
+  .navbar-basket {
+    width: 142px;
+    height: 50px;
+    background: #044dc3 0% 0% no-repeat padding-box;
+    border-radius: 28px;
+    color: white;
+    border: 0;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .basket-label {
+    background: #044dc3;
+    color: white;
+    border: 0;
+  }
+  // Navbar Mini Laptop
+  @media screen and (max-width: 1024px) {
+    .navbar-filter {
+      margin-left: 40px;
+      margin-right: 40px;
+      width: 300px;
+      .search-button {
+        width: 150px;
+      }
+    }
+    .navbar-basket {
+      width: 100px;
+    }
+    .navbar-basket-icon {
+      width: 16px;
+      height: 16px;
+    }
+    .basket-label {
+      font-size: 14px;
+    }
+  }
+}
+// Navbar Tablet
+@media screen and (max-width: 768px) {
+  .search-input {
+    width: 190px;
+  }
+  .navbar-filter {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 300px;
+    .search-button {
+      width: 50px;
+    }
+  }
+}
+// Navbar Mobile
+@media screen and (max-width: 475px) {
+  .navbar-box {
+    display: flex;
+    flex-direction: column;
+    .navbar-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      align-content: space-between;
+      margin-bottom: 10px;
+      .navbar-logo {
+        margin-right: 75px;
+      }
+      .navbar-basket-mobile {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: chartreuse;
+        border-radius: 50%;
+      }
+    }
+    .navbar-basket {
+      display: none;
+    }
+  }
+
+  .navbar-filter {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    margin-bottom: 10px;
+    .search-button {
+      width: 50px;
+    }
+    .search-input {
+      width: 40px;
+    }
+  }
+}
+/* Blue Line */
+.title-box {
+  background-image: url(../images/blue-line.png);
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+.title-lbl {
+  color: white;
+  margin-left: 218px;
+}
