@@ -125,5 +125,109 @@ export default [
     shipping: "Ücretsiz Teslimat",
     price: 19.90,
     categories:"toy"
-  }
+  },{
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: silverNeedle,
+    name: "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
+    shipping: "Ücretsiz Teslimat",
+    price: 29.90,
+    categories:"accessory"
+  },
+  {
+    photo: chocolate,
+    name: "Özel Tatlar Çikolata Kutusu 300 gr",
+    shipping: "Ücretsiz Teslimat",
+    price: 59.90,
+    categories:"gift"
+  },
+  {
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: bracelet,
+    name: "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
+    shipping: "",
+    price: 329.90,
+    categories:"accessory"
+  },
+  {
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: silverNeedle,
+    name: "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
+    shipping: "Ücretsiz Teslimat",
+    price: 29.90,
+    categories:"accessory"
+  },
+  {
+    photo: chocolate,
+    name: "Özel Tatlar Çikolata Kutusu 300 gr",
+    shipping: "Ücretsiz Teslimat",
+    price: 59.90,
+    categories:"gift"
+  },
+  {
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: bracelet,
+    name: "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
+    shipping: "",
+    price: 329.90,
+    categories:"accessory"
+  },
+  {
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: silverNeedle,
+    name: "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
+    shipping: "Ücretsiz Teslimat",
+    price: 29.90,
+    categories:"accessory"
+  },
+  {
+    photo: chocolate,
+    name: "Özel Tatlar Çikolata Kutusu 300 gr",
+    shipping: "Ücretsiz Teslimat",
+    price: 59.90,
+    categories:"gift"
+  },
+  {
+    photo: flowers,
+    name: "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
+    shipping: "",
+    price: 199.90 ,
+    categories:"flowers"
+  },
+  {
+    photo: bracelet,
+    name: "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
+    shipping: "",
+    price: 329.90,
+    categories:"accessory"
+  },
 ];
