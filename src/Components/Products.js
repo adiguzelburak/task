@@ -3,7 +3,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import "../Style/products.scss";
 import burgerIcon from "../images/burger-icon.svg";
+import redMoto from "../images/red-moto.png";
+import giftBox from "../images/gift-box.png";
+import stationary from "../images/stationary.png";
 import productList from "../productList";
+
 import { useState } from "react";
 const Products = () => {
   // states
@@ -23,12 +27,18 @@ const Products = () => {
           <label className="categories-title">Kategoriler</label>
         </div>
         <div className="categories">
-          <div>
-            <button className="categories-button">Tüm Kategoriler</button>
-          </div>
+          <button className="categories-button">Oyuncak</button>
+          <button className="categories-button">Çiçek</button>
+          <button className="categories-button">Aksesuar</button>
+          <button className="categories-button">Hediyelik Eşya</button>
+          <button className="categories-button">Parfüm</button>
+          <button className="categories-button">Ev Eşyaları</button>
+          <button className="categories-button">Teknoloji</button>
         </div>
       </div>
-
+      <div>
+        <label className="all-categories">Tüm Kategoriler</label>
+      </div>
       <div className="all-product-list">
         {productList.map((item) => (
           <div className="card">
@@ -53,6 +63,38 @@ const Products = () => {
             </div>
           </div>
         ))}
+      </div>
+      <hr />
+      <div className="offers">
+        <div className="offer-box-red">
+          <img className="offer-img" src={redMoto}></img>
+          <div>
+            <div className="offer-text">
+              75 TL Üzerine Teslimat Ücreti Bizden
+            </div>
+            <button className="offer-button">Detaylı Bilgi</button>
+          </div>
+        </div>
+        <div className="offer-box-blue">
+          <img className="offer-img" src={giftBox}></img>
+          <div>
+            <div className="offer-text">
+              Hediye Kategorisi için Sepette %15 İndirim
+            </div>
+            <button className="offer-button">Hediye Ürünleri</button>
+          </div>
+        </div>
+        <div className="offer-box-green">
+          <img className="offer-img" src={stationary}></img>
+          <div>
+            <div className="offer-text">
+              Kırtasiye Kategorisi için Sepette %15 İndirim
+            </div>
+            <button className="offer-button">Detaylı Bilgi</button>
+          </div>
+        </div>
+        <div className="offer-box"></div>
+        <div className="offer-box"></div>
       </div>
     </div>
   );

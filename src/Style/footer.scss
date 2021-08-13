@@ -116,3 +116,62 @@
     background: #e6e6e6 0% 0% no-repeat padding-box;
   }
 }
+@media screen and (max-width: 1024px) {
+  .footer-container {
+    height: 1480px;
+    .footer-apps {
+      width: 100%;
+      border-radius: 20px;
+      .footer-download{
+        align-items: center;
+        .footer-store{
+          margin-right: 0px;
+        }
+      }
+      .footer-telephone {
+        display: none;
+      }
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 105px;
+      .footer-links-social-media {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .logo {
+          width: 130px;
+          height: 30px;
+          margin-bottom: 30px;
+        }
+        .footer-links-social-media-icons {
+          display: flex;
+          flex-direction: row;
+          .footer-icon {
+            margin-right: 15px;
+          }
+        }
+        .footer-links-social-media-text{
+          text-align: center;
+          width: auto;
+          margin-bottom: 50px;
+        }
+      }
+      .vertical-hr {
+        display: none;
+      }
+      .list {
+        margin-left: 0px;
+        margin-top: 30px;
+      }
+    }
+    .footer-company-info {
+      display: none;
+    }
+    .footer-copyright{
+      font-size: 14px;
+    }
+  }
+}

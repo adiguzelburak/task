@@ -1,5 +1,5 @@
 .city-filter {
-  margin-left: 218px;
+  margin-left: 291px;
   margin-top: 10px;
   .city-filter-lbl {
     color: #51b549 !important;
@@ -18,19 +18,30 @@
       font-size: 24px;
     }
   }
-  .categories-button {
-    background: white;
-    color: #044dc3;
-    width: 195px;
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid #e2e7e9;
-    margin-top: 10px;
+  .categories {
+    width: 1560px;
+    .categories-button {
+      background: white;
+      color: #044dc3;
+      width: 195px;
+      height: 50px;
+      border-radius: 10px;
+      border: 1px solid #e2e7e9;
+      margin-top: 20px;
+      margin-right: 19px;
+    }
+    .categories-button:focus {
+      background: #044dc3;
+      color: white;
+    }
   }
-  .categories-button:focus {
-    background: #044dc3;
-    color: white;
-  }
+}
+.all-categories {
+  margin-left: 291px;
+  color: #707070;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .all-product-list {
   display: flex;
@@ -70,20 +81,126 @@
     }
   }
 }
+hr {
+  border: 2px solid #edf1f2;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 105px;
+  .offer-box-red {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffeae8;
+    width: 480px;
+    border-radius: 10px;
+    height: 150px;
+  }
+  .offer-box-blue {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e8f1ff;
+    width: 480px;
+    border-radius: 10px;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .offer-box-green {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #e2f7e1;
+    width: 480px;
+    border-radius: 10px;
+    height: 150px;
+  }
+  .offer-img {
+    width: 165px;
+    height: 130px;
+    margin-left: 10px;
+    margin-right: 35px;
+  }
+  .offer-text {
+    letter-spacing: 0px;
+    font: normal normal 300 24px/30px Source Sans Pro;
+  }
+  .offer-button {
+    width: 104px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: white;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+}
 @media screen and (max-width: 1200px) {
-  .all-product-list{
+  .offers {
+    display: flex;
+    flex-direction: column;
+    .offer-box-blue{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  .all-product-list {
     width: 800px;
     margin-right: 0px;
   }
+  .categories {
+    width: 920px !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .city-filter {
+    margin-left: 105px;
+  }
+  .all-categories {
+    margin-left: 105px;
+  }
+  .categories {
+    width: 920px !important;
+  }
 }
 @media screen and (max-width: 768px) {
-  .all-product-list{
+  .all-product-list {
     width: 610px;
     margin-right: auto;
   }
+  .categories {
+    width: 660px !important;
+  }
 }
 @media screen and (max-width: 500px) {
-  .all-product-list{
+  .city-filter {
+    margin-left: 72px;
+    .categories {
+      width: 350px !important;
+      margin-left: 26px;
+      .categories-button {
+        width: 272px;
+        margin-right: 0;
+      }
+    }
+  }
+  .all-categories {
+    margin-left: 72px;
+  }
+  .all-product-list {
     width: 310px;
     margin-right: auto;
   }

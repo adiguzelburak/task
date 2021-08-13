@@ -47,8 +47,8 @@ const Footer = () => {
           <div className="footer-links-social-media-text">
             CicekSepeti.com olarak kişisel verilerinizin gizliliğini
             önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu
-            kapsamında oluşturduğumuz aydınlatma metnine buradan
-            ulaşabilirsiniz.
+            kapsamında oluşturduğumuz aydınlatma metnine <u>buradan</u>
+             {" "}ulaşabilirsiniz.
           </div>
         </div>
         <hr className="vertical-hr" />
