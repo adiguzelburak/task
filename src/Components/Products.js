@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
@@ -6,19 +7,42 @@ import burgerIcon from "../images/burger-icon.svg";
 import redMoto from "../images/red-moto.png";
 import giftBox from "../images/gift-box.png";
 import stationary from "../images/stationary.png";
+import greenTick from "../images/green-tick.svg";
 import productList from "../productList";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 const Products = () => {
   // states
-  const [total, setTotal] = useState();
+  const [categorie, setCategorie] = useState("");
+  const [filtredCategorie, setFiltredCategorie] = useState(false);
+  const [allCategories, setAllCategories] = useState(true);
+  const [total, setTotal] = useState(0);
+  const [freeShipping, setFreeShipping] = useState(500);
 
-  const handlePrice = (price) => {
-    setTotal(price + price);
+  const changeAllCategorie = () => {
+    setFiltredCategorie(false);
+    setAllCategories(true);
   };
-  console.log(total);
+
+  const changeFiltredCategorie = (x) => {
+    setCategorie(x);
+    setFiltredCategorie(true);
+    setAllCategories(false);
+  };
+
+  const totalPrice = (price) => {
+    setTotal(total + price);
+  };
+
+  useEffect(() => {
+    setFreeShipping(500 - total);
+  }, [total]);
+
+
   return (
     <div>
+      <Navbar freeShipping={freeShipping} total={total} />
       <div className="city-filter">
         ÇiçekSepeti {">"} İstanbul {"> "}
         <label className="city-filter-lbl">ÇiçekSepetiBreadCrumb</label>
@@ -27,43 +51,110 @@ const Products = () => {
           <label className="categories-title">Kategoriler</label>
         </div>
         <div className="categories">
-          <button className="categories-button">Oyuncak</button>
-          <button className="categories-button">Çiçek</button>
-          <button className="categories-button">Aksesuar</button>
-          <button className="categories-button">Hediyelik Eşya</button>
-          <button className="categories-button">Parfüm</button>
-          <button className="categories-button">Ev Eşyaları</button>
-          <button className="categories-button">Teknoloji</button>
+          <button
+            onClick={() => changeFiltredCategorie("toy")}
+            className="categories-button"
+          >
+            Oyuncak
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("flowers")}
+            className="categories-button"
+          >
+            Çiçek
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("accessory")}
+            className="categories-button"
+          >
+            Aksesuar
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("gift")}
+            className="categories-button"
+          >
+            Hediyelik Eşya
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("parfume")}
+            className="categories-button"
+          >
+            Parfüm
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("homeAccessories")}
+            className="categories-button"
+          >
+            Ev Eşyaları
+          </button>
+          <button
+            onClick={() => changeFiltredCategorie("technology")}
+            className="categories-button"
+          >
+            Teknoloji
+          </button>
         </div>
       </div>
-      <div>
-        <label className="all-categories">Tüm Kategoriler</label>
+      <div className="all-categories">
+        <img className="green-tick" src={greenTick}></img>
+        <label onClick={changeAllCategorie} className="all-categories-label">
+          Tüm Kategoriler
+        </label>
       </div>
-      <div className="all-product-list">
-        {productList.map((item) => (
-          <div className="card">
-            <img
-              src={item.photo}
-              className="card-img-top product-photo"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title product-title">{item.name}</h5>
-              <p className="card-text product-shipping">
-                {item.shipping !== "" ? item.shipping : ""}
-              </p>
-              <p className="card-text product-price">{item.price}</p>
-              <a
-                id="mesut"
-                onClick={() => handlePrice(item.price)}
-                className="btn btn-primary"
-              >
-                Sepete Ekle
-              </a>
+      {filtredCategorie && (
+        <div className="all-product-list">
+          {productList
+            .filter((x) => (x.categories === categorie ? x : ""))
+            .map((item) => (
+              <div className="card">
+                <img
+                  src={item.photo}
+                  className="card-img-top product-photo"
+                  alt="..."
+                />
+                <div className="card-body">
+                  <h5 className="card-title product-title">{item.name}</h5>
+                  <p className="card-text product-shipping">
+                    {item.shipping !== "" ? item.shipping : "-"}
+                  </p>
+                  <p className="card-text product-price">{item.price}</p>
+                  <button
+                    onClick={() => totalPrice(item.price)}
+                    className="product-button"
+                  >
+                    Sepete Ekle
+                  </button>
+                </div>
+              </div>
+            ))}
+        </div>
+      )}
+      {allCategories && (
+        <div className="all-product-list">
+          {productList.map((item) => (
+            <div className="card">
+              <img
+                src={item.photo}
+                className="card-img-top product-photo"
+                alt="..."
+              />
+              <div className="card-body">
+                <h5 className="card-title product-title">{item.name}</h5>
+                <p className="card-text product-shipping">
+                  {item.shipping !== "" ? item.shipping : "-"}
+                </p>
+                <p className="card-text product-price">{item.price}</p>
+                <button
+                  className="product-button"
+                  onClick={() => totalPrice(item.price)}
+                >
+                  Sepete Ekle
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
       <hr />
       <div className="offers">
         <div className="offer-box-red">

@@ -45,18 +45,45 @@
       color: white;
     }
   }
-  .navbar-basket {
-    width: 142px;
-    height: 50px;
-    background: #044dc3 0% 0% no-repeat padding-box;
-    border-radius: 28px;
-    color: white;
-    border: 0;
-    opacity: 1;
+  .navbar-basket-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    .popup {
+      width: 343px;
+      height: 69px;
+      background-color: #f54257;
+      border-radius: 20px;
+      margin-top: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      .pop-up-text {
+        display: flex;
+        flex-direction: row;
+        img {
+          margin-left: 5px;
+        }
+        div {
+          color: #ffce00;
+        }
+      }
+    }
+    .navbar-basket {
+      width: 142px;
+      height: 50px;
+      background: #044dc3 0% 0% no-repeat padding-box;
+      border-radius: 28px;
+      color: white;
+      border: 0;
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
+
   .basket-label {
     background: #044dc3;
     color: white;
@@ -96,15 +123,22 @@
 }
 // Navbar Tablet
 @media screen and (max-width: 768px) {
-  .navbar-filter {
-    margin-left: 40px;
-    margin-right: 40px;
-    width: 300px;
-    .search-button {
-      width: 50px;
+  .navbar-box {
+    .navbar-basket-box {
+      .popup {
+        width: 210px !important;
+      }
     }
-    .search-input {
-      width: 190px;
+    .navbar-filter {
+      margin-left: 40px;
+      margin-right: 40px;
+      width: 300px;
+      .search-button {
+        width: 50px;
+      }
+      .search-input {
+        width: 190px;
+      }
     }
   }
 }
@@ -113,6 +147,14 @@
   .navbar-box {
     display: flex;
     flex-direction: column;
+    .navbar-basket-box {
+      .popup {
+        width: 310px !important;
+      }
+      .navbar-basket {
+        display: none;
+      }
+    }
     .navbar-container {
       display: flex;
       flex-direction: row;
@@ -121,18 +163,19 @@
       align-content: space-between;
       margin-bottom: 10px;
       .navbar-logo {
-        margin-right: 75px;
+        margin-right: 35px;
       }
       .navbar-basket-mobile {
         display: block;
-        width: 40px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 40px;
-        background: chartreuse;
-        border-radius: 50%;
+        background: #044dc3;
+        border-radius: 10px;
+        color:white;
       }
-    }
-    .navbar-basket {
-      display: none;
     }
   }
   .navbar-filter {

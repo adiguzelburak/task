@@ -36,12 +36,23 @@
     }
   }
 }
+
 .all-categories {
   margin-left: 291px;
-  color: #707070;
-  font-size: 20px;
   margin-top: 30px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  .green-tick {
+    width: 22px;
+    height: 17px;
+    margin-right: 5px;
+  }
+  .all-categories-label {
+    color: #707070;
+    font-size: 20px;
+    cursor: pointer;
+  }
 }
 .all-product-list {
   display: flex;
@@ -78,6 +89,16 @@
       font-weight: bold;
       color: black;
       margin-bottom: 3px;
+    }
+    .product-button {
+      width: 220px;
+      height: 40px;
+      border-radius: 22px;
+      border: 1px solid #044dc3;
+      color: #044dc3;
+      background-color: white;
+      font-weight: 600;
+      font-size: 15px;
     }
   }
 }
@@ -150,11 +171,21 @@ hr {
   .offers {
     display: flex;
     flex-direction: column;
-    .offer-box-blue{
+    .offer-box-blue {
+      width: 340px;
+      height: 180px;
       margin-top: 30px;
       margin-bottom: 30px;
       margin-left: 0px;
       margin-right: 0px;
+    }
+    .offer-box-red {
+      width: 340px;
+      height: 180px;
+    }
+    .offer-box-green {
+      width: 340px;
+      height: 180px;
     }
   }
   .all-product-list {
@@ -186,8 +217,14 @@ hr {
   }
 }
 @media screen and (max-width: 500px) {
+  .offers{
+    margin-left: 20px;
+  }
   .city-filter {
-    margin-left: 72px;
+    margin-left: 0px;
+    .categories-box {
+      margin-left: 25px;
+    }
     .categories {
       width: 350px !important;
       margin-left: 26px;
